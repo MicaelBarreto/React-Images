@@ -5,7 +5,9 @@ import './header.css';
 
 const Header = () => (
     <div className='header'>
-        <Link to='/'>Aqui</Link>
+        <Link to='/'>
+            <h1>IMAGES</h1>
+        </Link>
     </div>
 );
 

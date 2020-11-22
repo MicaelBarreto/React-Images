@@ -10,8 +10,8 @@ const Footer = () => (
         <div className='footer-content'>
             <FooterFile file='curriculum' />
             <FooterFile file='resume' />
-            <FooterLink link='github' />
-            <FooterLink link='linkedin' />
+            <FooterLink linkName='github' />
+            <FooterLink linkName='linkedin' />
         </div>
         <p>Desenvolvido por Micael Moraes</p>
     </footer>

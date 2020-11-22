@@ -1,3 +1,42 @@
-.navigation-bar{
+.navigation-bar {
+    margin: 2%;
     display: flex;
+    justify-self: center;
+    align-self: center;
+}
+
+.navigation-bar button {
+    display: flex;
+    border: none;
+    border-radius: 2px;
+    font-size: 30px;
+    background-color: #EADCC7;
+}
+
+.navigation-bar button:hover {
+    background-color: #fffaf0;
+    cursor: pointer;
+}
+
+.navigation-bar button:checked {
+    border: none;
+}
+
+.navigation-bar button:active {
+    border: none;
+}
+
+.navigation-bar button:focus {
+    outline: none;
+}
+
+.highlited-button {
+    color: #B85224;
+    background-color: #fffaf0 !important;
+}
+
+.arrow-button {
+    background-color: #B85224 !important;
+    color: #fffaf0;
+    border: 1px solid #B85224 !important;
 }

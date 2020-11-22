@@ -1,6 +1,8 @@
 footer {
-    background-color: aqua;
+    background-color: #1F1811;
     width: 100%;
+    color: #A9AEA8;
+    padding-bottom: 2%;
 }
 
 .footer-content {
@@ -8,9 +10,15 @@ footer {
     justify-content: space-around;
 }
 
-p {
-    align-self: flex-end;
-    justify-self: flex-end;
+.footer-content a {
+    margin-top: 2%;
+    text-decoration: none;
+    color: #A9AEA8;
+}
+
+footer p {
+    margin-top: 3%;
+    text-align: end;
 }
 
 @media only screen and (max-width: 600px) {

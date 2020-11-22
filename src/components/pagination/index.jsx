@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 import Navigation from '../navigation';
 
@@ -8,18 +8,23 @@ const Pagination = props => {
     const [page, setPage] = useState();
     const [perPage, setPerPage] = useState();
     const [totalPages, setTotalPages] = useState(1);
+    const loaded = useRef(false);
 
-    const perPageChoices = [10, 20, 30, 40, 50, 100];
+    const perPageChoices = [20, 40, 100];
 
-    useEffect(() => {
-        setPage(typeof props.initialPage !== 'undefined' ? props.initialPage : 1);
-        setPerPage(typeof props.initialPerPage !== 'undefined' ? props.initialPerPage : perPageChoices[0]);
-        setTotalPages(Math.ceil( props.data.lenght/perPage ))
-    }, []);
+    useEffect(() => setPerPage(typeof props.initialPerPage !== 'undefined' ? props.initialPerPage : perPageChoices[0]), []);
 
     useEffect(() => {
-        console.log(props)
-        const data = props.data.slice((page-1) * perPage, ((page * perPage) - 1));
+        setTotalPages(Math.ceil( props.data.length/perPage ));
+
+        if(!loaded.current) {
+            setPage(typeof props.initialPage !== 'undefined' ? props.initialPage : 1);
+            loaded.current = true;
+        }
+    }, [perPage]);
+
+    useEffect(() => {
+        const data = props.data.slice((page-1) * perPage, page * perPage);
         props.setContent(data);
     }, [page]);
 

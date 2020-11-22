@@ -1,13 +1,17 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
+import { Redirect, withRouter } from 'react-router-dom';
 
 import './image-card.css';
 
+const redirectToImage = imageId => {
+    console.log('entrou');
+};
+
 const ImageCard = ({ image }) => (
-    <Link to={`/${image.id}`}>
-        <img src={image.ImageCard} alt=""/>
+    <div className='image-card' onClick={() => redirectToImage(image.id)}>
+        <img src={image.thumbnailUrl} alt=""/>
         <p>{image.title}</p>
-    </Link>
+    </div>
 );
 
 export default withRouter(ImageCard);

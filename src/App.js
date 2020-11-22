@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Template from './template';
 import routes from './routes';
 
+import './app.css'
+
 const App = () => {
   return (
     <BrowserRouter>

@@ -1,0 +1,45 @@
+.image-card {
+    background-color: #fffaf0;
+    margin: 1%;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+    transition: 0.3s;
+    cursor: pointer;
+
+    width: 20%;
+}
+
+.image-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+}
+
+.image-card:active {
+    box-shadow: 0 16px 32px 0 rgba(0,0,0,0.8);
+}
+
+.image-card img {
+    margin-top: 5%;
+}
+
+.image-card p {
+    margin: 5%;
+}
+
+@media only screen and (max-width: 1199px) {
+    .image-card {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 799px) {
+    .image-card {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .image-card {
+        width: 100%;
+    }
+}
